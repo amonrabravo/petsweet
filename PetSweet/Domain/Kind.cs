@@ -8,7 +8,7 @@ public record Kind
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;
 
-    public ICollection<Pet>? Pets { get; init; } = new();
+    public ICollection<Pet>? Pets { get; init; } = [];
 }
 
 public record KindConfiguration : IEntityTypeConfiguration<Kind>

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace PetSweet.Controllers;
 
@@ -8,6 +9,8 @@ public class HomeController : Controller
     {
         return View();
     }
+
+
     public IActionResult AboutUs()
     {
         return View();

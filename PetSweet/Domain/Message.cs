@@ -10,6 +10,9 @@ public record Message
     public Guid PetId { get; set; }
     public DateTimeOffset Date { get; set; }
     public string Content { get; set; } = null!;
+
+    public User? User { get; set; }
+    public Pet? Pet { get; set; }
 }
 
 public record MessageConfiguration : IEntityTypeConfiguration<Message>

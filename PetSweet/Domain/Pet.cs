@@ -12,9 +12,13 @@ public record Pet
     public DateTimeOffset Date { get; set; }
     public string Name { get; set; } = null!;
     public string? Description { get; set; }
+    public bool IsApproved { get; set; } = false;
+
 
     public Kind? Kind { get; set; }
-    public ICollection<Message>? Messages { get; init; } = new();
+    public User? User { get; set; }
+    public City? City { get; set; }
+    public ICollection<Message>? Messages { get; init; } = [];
 }
 
 public record PetConfiguration : IEntityTypeConfiguration<Pet>

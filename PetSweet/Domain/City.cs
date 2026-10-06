@@ -7,7 +7,7 @@ public record City
 {
     public int Id { get; set; }
     public string Name { get; set; } = null!;
-    public ICollection<Pet> Pets { get; init; } = new();
+    public ICollection<Pet> Pets { get; init; } = [];
 }
 
 public record CityConfiguration : IEntityTypeConfiguration<City>
