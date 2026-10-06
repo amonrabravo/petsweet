@@ -1,7 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model LoginViewModel
 @{
+    Layout = "_LayoutAccount";
 }
 
-<h4>Kullanıcı Girişi</h4>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Kullanıcı Girişi</h5>
+        <p class="card-text">Lütfen kullanıcı adınızı ve şifrenizi giriniz.</p>
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">E-Posta</label>
+                <input asp-for="Email" class="form-control">
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label">Parola</label>
+                <input asp-for="Password" class="form-control">
+            </div>
+            <div class="mb-3 form-check">
+                <input asp-for="RememberMe" class="form-check-input">
+                <label asp-for="RememberMe" class="form-check-label">Beni hatırla</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/jquery-validate/jquery.validate.min.js"></script>
+    <script src="~/js/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

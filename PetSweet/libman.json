@@ -99,6 +99,24 @@
         "scss/utilities/_api.scss",
         "scss/vendor/_rfs.scss"
       ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery-validate@1.22.1",
+      "destination": "wwwroot/js/jquery-validate/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery-validation-unobtrusive@4.0.0",
+      "destination": "wwwroot/js/jquery-validation-unobtrusive/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery@4.0.0",
+      "destination": "wwwroot/js/jquery/",
+      "files": [
+        "jquery.min.js"
+      ]
     }
   ]
 }

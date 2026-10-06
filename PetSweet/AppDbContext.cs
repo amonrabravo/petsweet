@@ -7,7 +7,7 @@ namespace PetSweet;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbContext<
     User, 
-    IdentityRole<Guid>, 
+    Role, 
     Guid,    
     IdentityUserClaim<Guid>,
     IdentityUserRole<Guid>, 
